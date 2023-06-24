@@ -37,6 +37,9 @@ app.use("/api/products", productRoute);
 app.use("/api/bills", billRoute);
 app.use("/api/auth", registerRoute);
 app.use("/api/users", userRoute);
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 
 app.listen(port, () => {
   connect();
